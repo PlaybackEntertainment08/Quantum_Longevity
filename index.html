@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FAFBFC" />
+
+  <title>Quantum Longevity — The science of living longer</title>
+  <meta name="description" content="Personalized cellular optimization, diagnostic precision, and clinically-guided protocols designed to extend your healthspan — not just your lifespan." />
+  <meta name="author" content="Quantum Longevity" />
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Quantum Longevity — The science of living longer" />
+  <meta property="og:description" content="A longevity clinic's digital front door. Personalized cellular optimization for high-performance lives." />
+  <meta property="og:image" content="images/og-cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Sora:wght@300;400;500;600&display=swap" />
+
+  <!-- Swiper core CSS (must precede style.css so site rules can override) -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalOrganization",
+    "name": "Quantum Longevity",
+    "description": "Longevity, anti-aging, and cellular optimization clinic.",
+    "url": "https://quantumlongevity.example.com",
+    "logo": "images/favicon.png",
+    "foundingDate": "2009",
+    "medicalSpecialty": ["LongevityMedicine", "PreventiveMedicine"]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ===== Header / Navigation ===== -->
+  <header class="nav-wrap" role="banner">
+    <div class="container-q nav-inner">
+      <a href="index.html" class="brand" aria-label="Quantum Longevity — Home">
+        <!-- Hexagon mark -->
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <path d="M14 1.5L25.5 8v12L14 26.5 2.5 20V8L14 1.5Z" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="14" cy="14" r="3" fill="currentColor"/>
+          <path d="M14 11V5M14 23v-6M19 11.5l3-2M6 18.5l3-2M19 16.5l3 2M6 9.5l3 2" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-text">Quantum Longevity</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="process.html">Science</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="contact.html" class="btn-q btn-gold" data-magnetic>
+          Book Consultation
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navOverlay">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile overlay menu -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true">
+    <nav class="nav-links-mobile" aria-label="Mobile">
+      <a href="index.html">Home <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="about.html">About <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="programs.html">Programs <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="process.html">Science <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="contact.html">Contact <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </nav>
+    <div class="u-overlay-foot">
+      Zurich · New York · Singapore
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" aria-labelledby="heroHeadline">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <span class="blob blob-1" aria-hidden="true"></span>
+      <span class="blob blob-2" aria-hidden="true"></span>
+      <span class="blob blob-3" aria-hidden="true"></span>
+
+      <div class="container-q hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow">// LONGEVITY · CELLULAR SCIENCE · EST. 2009</div>
+          <h1 id="heroHeadline" data-split>Unlock the science of <em>living longer.</em></h1>
+          <p class="hero-subhead">
+            Personalized cellular optimization, diagnostic precision, and clinically-guided protocols
+            designed to extend your healthspan — not just your lifespan.
+          </p>
+          <div class="hero-ctas">
+            <a href="programs.html" class="btn-q btn-gold" data-magnetic>
+              Explore Programs
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a href="contact.html" class="btn-q btn-ghost">Book Consultation</a>
+          </div>
+          <div class="hero-trust">
+            <div class="hero-trust-avatars" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="hero-trust-text">
+              <strong>Trusted by 10,000+ members</strong><br>
+              Featured in Bloomberg, Forbes &amp; Wired
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual: orb + floating chips -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orb"></div>
+
+          <!-- DNA helix overlay -->
+          <svg class="u-helix" viewBox="0 0 200 200" fill="none" stroke="white" stroke-width="0.8">
+            <path d="M40 20 C 100 60, 100 60, 160 100 C 100 140, 100 140, 40 180" />
+            <path d="M160 20 C 100 60, 100 60, 40 100 C 100 140, 100 140, 160 180" />
+            <line x1="50" y1="40" x2="150" y2="40"/>
+            <line x1="60" y1="60" x2="140" y2="60"/>
+            <line x1="80" y1="80" x2="120" y2="80"/>
+            <line x1="80" y1="120" x2="120" y2="120"/>
+            <line x1="60" y1="140" x2="140" y2="140"/>
+            <line x1="50" y1="160" x2="150" y2="160"/>
+          </svg>
+
+          <div class="stat-chip chip-1">
+            <div class="chip-label">Biological age</div>
+            <div class="chip-value">−7.2 yrs <span class="delta">↓</span></div>
+          </div>
+          <div class="stat-chip chip-2">
+            <div class="chip-label">Cellular health</div>
+            <div class="chip-value">94% <span class="delta">↑</span></div>
+          </div>
+          <div class="stat-chip chip-3">
+            <div class="chip-label">VO₂ max</div>
+            <div class="chip-value">+18% <span class="delta">↑</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Trust Strip ===== -->
+    <section class="trust-strip" aria-label="Key metrics">
+      <div class="container-q">
+        <div class="trust-stats reveal stagger">
+          <div class="trust-stat">
+            <div class="num"><span data-count="10000" data-suffix="+">0</span></div>
+            <div class="label">Members worldwide</div>
+          </div>
+          <div class="trust-stat">
+            <div class="num"><span data-count="25" data-suffix="+">0</span></div>
+            <div class="label">Active research programs</div>
+          </div>
+          <div class="trust-stat">
+            <div class="num"><span data-count="98" data-suffix="%">0</span></div>
+            <div class="label">Member satisfaction</div>
+          </div>
+          <div class="trust-stat">
+            <div class="num"><span data-count="15">0</span></div>
+            <div class="label">Years of clinical practice</div>
+          </div>
+        </div>
+
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-track">
+            <span class="marquee-item">Stanford Medicine</span>
+            <span class="marquee-item">Buck Institute</span>
+            <span class="marquee-item">Mayo Clinic</span>
+            <span class="marquee-item">Harvard T.H. Chan</span>
+            <span class="marquee-item">Yale School of Medicine</span>
+            <span class="marquee-item">UCSF</span>
+            <span class="marquee-item">Karolinska Institutet</span>
+            <!-- duplicate for seamless loop -->
+            <span class="marquee-item">Stanford Medicine</span>
+            <span class="marquee-item">Buck Institute</span>
+            <span class="marquee-item">Mayo Clinic</span>
+            <span class="marquee-item">Harvard T.H. Chan</span>
+            <span class="marquee-item">Yale School of Medicine</span>
+            <span class="marquee-item">UCSF</span>
+            <span class="marquee-item">Karolinska Institutet</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About Preview ===== -->
+    <section id="about-preview" aria-labelledby="aboutPreviewHeading">
+      <div class="container-q about-grid">
+        <div class="about-frame reveal">
+          <div class="about-frame-inner" aria-hidden="true"></div>
+          <div class="about-badge">
+            <span class="year">Est. 2009</span>
+            <span class="label">Zurich · Origin</span>
+          </div>
+        </div>
+        <div class="about-copy reveal">
+          <div class="eyebrow">// 01 — Our origin</div>
+          <h2 id="aboutPreviewHeading">A private clinic built around <em>one question</em>: how long can we live well?</h2>
+          <p>
+            Founded in Zurich in 2009 by a team of physicians, geneticists, and translational researchers,
+            Quantum Longevity was created to bring the rigor of academic medicine to the intimate
+            scale of a private practice.
+          </p>
+          <p>
+            We don't promise miracles. We measure carefully, intervene precisely, and follow
+            our members for decades. Healthspan is the goal; lifespan is the side effect.
+          </p>
+          <a href="about.html" class="link-arrow">
+            Read our story
+            <svg width="18" height="14" viewBox="0 0 24 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9h20M15 2l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Programs — Bento Grid ===== -->
+    <section id="programs" class="section-alt" aria-labelledby="programsHeading">
+      <div class="container-q">
+        <div class="section-head">
+          <div class="eyebrow">// 02 — Our programs</div>
+          <h2 id="programsHeading">Six clinical pathways. <em>One protocol</em> built for you.</h2>
+        </div>
+
+        <div class="bento reveal stagger">
+          <!-- Feature tile -->
+          <article class="bento-tile b-feature">
+            <div class="feature-visual" aria-hidden="true"></div>
+            <span class="tile-num">// 01</span>
+            <div class="tile-icon" aria-hidden="true">
+              <!-- Cell -->
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="24" cy="24" r="18"/>
+                <circle cx="24" cy="24" r="10"/>
+                <circle cx="24" cy="24" r="3" fill="currentColor"/>
+                <circle cx="14" cy="14" r="1.5" fill="currentColor"/>
+                <circle cx="34" cy="34" r="1.5" fill="currentColor"/>
+                <circle cx="34" cy="14" r="1.5" fill="currentColor"/>
+                <circle cx="14" cy="34" r="1.5" fill="currentColor"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Cellular Rejuvenation</h3>
+              <p>
+                A flagship 12-month program targeting the nine hallmarks of aging — senescent cell clearance,
+                mitochondrial function, autophagy, and telomere maintenance — through coordinated diagnostics,
+                clinically-supervised therapies, and quarterly reassessment.
+              </p>
+              <a href="programs.html#cellular" class="tile-link">View pathway <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="bento-tile b-half" data-tilt="4">
+            <span class="tile-num">// 02</span>
+            <div class="tile-icon" aria-hidden="true">
+              <!-- DNA helix -->
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+                <path d="M14 6c0 8 20 12 20 20s-20 12-20 20"/>
+                <path d="M34 6c0 8-20 12-20 20s20 12 20 20"/>
+                <path d="M16 12h16M14 18h20M14 30h20M16 36h16"/>
+              </svg>
+            </div>
+            <div>
+              <h3>DNA Optimization</h3>
+              <p>Whole-genome sequencing translated into actionable interventions — pharmacogenomics, methylation, polygenic risk.</p>
+            </div>
+          </article>
+
+          <article class="bento-tile b-half" data-tilt="4">
+            <span class="tile-num">// 03</span>
+            <div class="tile-icon" aria-hidden="true">
+              <!-- Hormone droplet -->
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M24 4c-6 8-14 16-14 24a14 14 0 0 0 28 0c0-8-8-16-14-24Z"/>
+                <path d="M18 28a6 6 0 0 0 6 6"/>
+                <circle cx="32" cy="20" r="2"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Hormone Balancing</h3>
+              <p>Bioidentical hormone optimization for executives navigating perimenopause, andropause, and chronic stress.</p>
+            </div>
+          </article>
+
+          <article class="bento-tile b-third" data-tilt="4">
+            <span class="tile-num">// 04</span>
+            <div class="tile-icon" aria-hidden="true">
+              <!-- Microscope/stethoscope abstract -->
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 6v14a10 10 0 0 0 20 0V6"/>
+                <circle cx="14" cy="6" r="2"/>
+                <circle cx="34" cy="6" r="2"/>
+                <path d="M24 30v6a8 8 0 0 0 8 8h2a4 4 0 0 0 0-8h0"/>
+                <circle cx="34" cy="42" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Functional Medicine</h3>
+              <p>Root-cause investigation of chronic inflammation, autoimmunity, and metabolic syndrome.</p>
+            </div>
+          </article>
+
+          <article class="bento-tile b-third" data-tilt="4">
+            <span class="tile-num">// 05</span>
+            <div class="tile-icon" aria-hidden="true">
+              <!-- Leaf -->
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M40 6C20 6 8 18 8 34c0 4 1 8 1 8s14-2 22-10S40 14 40 6Z"/>
+                <path d="M10 40 38 12"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Precision Nutrition</h3>
+              <p>Continuous glucose, metabolomic, and microbiome data translated into a kitchen-ready plan.</p>
+            </div>
+          </article>
+
+          <article class="bento-tile b-third" data-tilt="4">
+            <span class="tile-num">// 06</span>
+            <div class="tile-icon" aria-hidden="true">
+              <!-- Brain / circuit -->
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M24 8a8 8 0 0 0-8 8v2a6 6 0 0 0-2 12 6 6 0 0 0 6 6h4v6"/>
+                <path d="M24 8a8 8 0 0 1 8 8v2a6 6 0 0 1 2 12 6 6 0 0 1-6 6h-4"/>
+                <circle cx="20" cy="20" r="1.5" fill="currentColor"/>
+                <circle cx="28" cy="20" r="1.5" fill="currentColor"/>
+                <path d="M20 28h8"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Biohacking Programs</h3>
+              <p>HRV, sleep architecture, red-light, hyperbaric, and cold-thermogenic stacks — measured, not marketed.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Why Choose Us ===== -->
+    <section aria-labelledby="whyHeading">
+      <div class="container-q">
+        <div class="section-head">
+          <div class="eyebrow">// 03 — Why members choose us</div>
+          <h2 id="whyHeading">Restraint, repeatable. <em>Rigor, daily.</em></h2>
+        </div>
+
+        <div class="why-grid reveal stagger">
+          <article class="why-card" data-tilt="6">
+            <div class="w-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="40" height="40">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                <circle cx="12" cy="12" r="4"/>
+              </svg>
+            </div>
+            <h4>Clinical precision</h4>
+            <p>Every protocol is built by a physician, not an algorithm.</p>
+            <span class="w-num">01</span>
+          </article>
+
+          <article class="why-card gold-stroke" data-tilt="6">
+            <div class="w-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="40" height="40">
+                <path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4Z"/>
+                <path d="m9 12 2 2 4-4"/>
+              </svg>
+            </div>
+            <h4>Absolute discretion</h4>
+            <p>Member data is encrypted, sequestered, and never sold.</p>
+            <span class="w-num">02</span>
+          </article>
+
+          <article class="why-card" data-tilt="6">
+            <div class="w-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="40" height="40">
+                <path d="M3 12h4l3-9 4 18 3-9h4"/>
+              </svg>
+            </div>
+            <h4>200+ biomarkers</h4>
+            <p>Tracked across a decade, not a single snapshot.</p>
+            <span class="w-num">03</span>
+          </article>
+
+          <article class="why-card" data-tilt="6">
+            <div class="w-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="40" height="40">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <h4>Lifelong partnership</h4>
+            <p>Your team, on call. Quarterly refinements, decade horizons.</p>
+            <span class="w-num">04</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Process Timeline ===== -->
+    <section id="process" class="section-mist" aria-labelledby="processHeading">
+      <div class="container-q">
+        <div class="section-head">
+          <div class="eyebrow">// 04 — The scientific process</div>
+          <h2 id="processHeading">From intake to <em>optimization</em>, in five deliberate steps.</h2>
+        </div>
+
+        <div class="process-wrap reveal">
+          <div class="process-track">
+            <div class="process-step">
+              <div class="process-num">01</div>
+              <h4>Assessment</h4>
+              <p>A two-hour clinical intake. Family history, lifestyle, prior labs, current goals.</p>
+            </div>
+            <div class="process-step">
+              <div class="process-num">02</div>
+              <h4>Diagnostics</h4>
+              <p>200+ biomarkers. Whole-genome sequencing. Functional imaging. VO₂ max.</p>
+            </div>
+            <div class="process-step">
+              <div class="process-num">03</div>
+              <h4>Personalized Plan</h4>
+              <p>Built by your physician, geneticist, and clinical-nutrition team in concert.</p>
+            </div>
+            <div class="process-step">
+              <div class="process-num">04</div>
+              <h4>Monitoring</h4>
+              <p>Continuous-glucose, sleep, HRV, and quarterly bloods feed your dashboard.</p>
+            </div>
+            <div class="process-step">
+              <div class="process-num">05</div>
+              <h4>Optimization</h4>
+              <p>Protocol refined every 90 days. The work is iterative; so is your biology.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Testimonials ===== -->
+    <section aria-labelledby="testimonialsHeading">
+      <div class="container-q">
+        <div class="section-head center">
+          <div class="eyebrow u-eyebrow-center">// 05 — Member voices</div>
+          <h2 id="testimonialsHeading">Quiet outcomes, <em>spoken plainly</em>.</h2>
+        </div>
+
+        <div class="testimonial-wrap reveal">
+          <div class="swiper testimonial-swiper">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <article class="testimonial-card">
+                  <span class="quote-mark" aria-hidden="true">“</span>
+                  <blockquote class="quote">
+                    Three years in, my biological age has dropped seven years and I'm running my fastest
+                    marathon since university. More importantly, I sleep through the night.
+                  </blockquote>
+                  <div class="testimonial-meta">
+                    <div class="testimonial-avatar" aria-hidden="true">DH</div>
+                    <div>
+                      <div class="name">Daniel Hofstetter</div>
+                      <div class="meta">Age 54 · Cellular Rejuvenation</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="testimonial-card">
+                  <span class="quote-mark" aria-hidden="true">“</span>
+                  <blockquote class="quote">
+                    I came here after a frightening cardiac scan. The team rebuilt my metabolic
+                    health in eighteen months. The plan was specific, the people were patient.
+                  </blockquote>
+                  <div class="testimonial-meta">
+                    <div class="testimonial-avatar" aria-hidden="true">IM</div>
+                    <div>
+                      <div class="name">Isabella Marchetti</div>
+                      <div class="meta">Age 49 · Functional Medicine</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="testimonial-card">
+                  <span class="quote-mark" aria-hidden="true">“</span>
+                  <blockquote class="quote">
+                    What separates Quantum is restraint. They told me what not to do as often as
+                    what to do. That alone was worth the program.
+                  </blockquote>
+                  <div class="testimonial-meta">
+                    <div class="testimonial-avatar" aria-hidden="true">AT</div>
+                    <div>
+                      <div class="name">Akira Tanaka</div>
+                      <div class="meta">Age 61 · Hormone Balancing</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="testimonial-card">
+                  <span class="quote-mark" aria-hidden="true">“</span>
+                  <blockquote class="quote">
+                    Their dashboard shows me the version of myself five years from now. That's a
+                    rare and useful gift.
+                  </blockquote>
+                  <div class="testimonial-meta">
+                    <div class="testimonial-avatar" aria-hidden="true">HV</div>
+                    <div>
+                      <div class="name">Helena Vasquez</div>
+                      <div class="meta">Age 42 · DNA Optimization</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="swiper-dots" role="tablist" aria-label="Testimonial pagination"></div>
+
+          <div class="swiper-nav">
+            <button type="button" class="prev" aria-label="Previous testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            </button>
+            <button type="button" class="next" aria-label="Next testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="section-alt" aria-labelledby="faqHeading">
+      <div class="container-q">
+        <div class="section-head center">
+          <div class="eyebrow u-eyebrow-center">// 06 — Frequently asked</div>
+          <h2 id="faqHeading">Honest answers to the <em>questions members ask first</em>.</h2>
+        </div>
+
+        <div class="faq-list reveal">
+          <div class="faq-item open">
+            <button type="button" class="faq-q">
+              What is biological age, and how is it measured?
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a">
+              We use a panel of validated epigenetic clocks (Horvath, GrimAge, PhenoAge) combined with
+              functional markers like VO₂ max, grip strength, and metabolic flexibility. The result is
+              a composite biological age — a far more useful number than your birthday.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-q">
+              How is Quantum Longevity different from a regular clinic?
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a">
+              A regular clinic treats illness. We optimize the systems that cause it. Our average
+              member visit is 90 minutes; our average lab panel covers 200+ markers; our average
+              relationship is measured in decades.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-q">
+              What does a typical program cost?
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a">
+              Programs begin at $20,000 annually and scale with diagnostic depth. We're transparent
+              about pricing during the consultation. Cost should never be the variable that
+              determines your health trajectory.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-q">
+              How quickly can I see results?
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a">
+              Most members notice cognitive clarity and sleep quality within 30 days. Inflammatory
+              markers move in 90. Biological-age reductions typically appear after 6–12 months of
+              consistent protocol adherence.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-q">
+              Is genetic testing included?
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a">
+              Yes. Whole-genome sequencing is included in every program, interpreted by our
+              in-house geneticists, and reviewed alongside your physician. Your raw data remains
+              yours — we never share, sell, or license it.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA Banner ===== -->
+    <section id="cta" class="cta-banner section-dark" data-nav="dark" aria-labelledby="ctaHeading">
+      <div class="cta-particles" aria-hidden="true"></div>
+      <div class="container-q u-center u-relative u-z-1">
+        <div class="eyebrow invert u-eyebrow-center"><span class="pulse-dot"></span>// Begin · Zurich · New York · Singapore</div>
+        <h2 id="ctaHeading">Start your longevity <em>journey today.</em></h2>
+        <p>
+          A 30-minute consultation with our intake team. No commitment, no upsell — just an
+          honest assessment of whether our programs fit your goals.
+        </p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn-q btn-gold" data-magnetic>
+            Book Consultation
+            <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="about.html" class="btn-q btn-ghost invert">Meet the team</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container-q">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="brand">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <path d="M14 1.5L25.5 8v12L14 26.5 2.5 20V8L14 1.5Z" stroke="currentColor" stroke-width="1.4"/>
+              <circle cx="14" cy="14" r="3" fill="currentColor"/>
+            </svg>
+            <span>Quantum Longevity</span>
+          </a>
+          <p>A private longevity practice serving members across Zurich, New York, and Singapore.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14ZM8.34 18.34V10H6V18.34h2.34ZM7.17 8.84a1.4 1.4 0 1 0 0-2.8 1.4 1.4 0 0 0 0 2.8ZM18 18.34v-4.7c0-2.2-1.18-3.22-2.75-3.22-1.27 0-1.83.7-2.15 1.2V10H10.6c.04.6 0 8.34 0 8.34h2.5v-4.65c0-.23.02-.45.08-.62.18-.45.6-.91 1.29-.91.91 0 1.27.7 1.27 1.7v4.48H18Z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="X"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.2 3H21l-6.5 7.4L22 21h-6l-4.7-6.2L5.9 21H3.1l7-8L2.5 3h6.1l4.3 5.7L18.2 3Z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navigate</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="process.html">Science</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Programs</h5>
+          <ul>
+            <li><a href="programs.html#cellular">Cellular Rejuvenation</a></li>
+            <li><a href="programs.html#dna">DNA Optimization</a></li>
+            <li><a href="programs.html#hormone">Hormone Balancing</a></li>
+            <li><a href="programs.html#functional">Functional Medicine</a></li>
+            <li><a href="programs.html#nutrition">Precision Nutrition</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h5>The brief — monthly</h5>
+          <p class="u-newsletter-lede">
+            One short letter per month on what's actually moving in longevity science. No supplements, no hype.
+          </p>
+          <form class="newsletter" novalidate>
+            <input type="email" placeholder="you@somewhere.com" aria-label="Email address" required />
+            <button type="submit" aria-label="Subscribe">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <hr class="gold-divider">
+
+      <div class="footer-bottom">
+        <div>© <span class="copy-year">2026</span> Quantum Longevity AG. All rights reserved.</div>
+        <div class="legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Disclosures</a>
+          <a href="#">Imprint</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Libraries -->
+  <script src="js/gsap.min.js" defer></script>
+  <script src="js/ScrollTrigger.min.js" defer></script>
+  <script src="js/swiper-bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js" defer></script>
+
+  <!-- App -->
+  <script src="js/main.js" defer></script>
+  <script src="js/components.js" defer></script>
+  <script src="js/animations.js" defer></script>
+</body>
+</html>

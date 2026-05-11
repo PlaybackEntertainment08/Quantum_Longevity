@@ -1,0 +1,115 @@
+/* =========================================================
+   Responsive: breakpoint overrides
+   Strategy: desktop layouts in style.css collapse here.
+   ========================================================= */
+
+/* ---- 2xl: 1400+ (large desktop refinements) ---- */
+@media (min-width: 1400px) {
+  .container-q { padding-inline: 56px; }
+}
+
+/* ---- xl down (<= 1199) ---- */
+@media (max-width: 1199.98px) {
+  .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; }
+  .footer-newsletter { grid-column: 1 / -1; max-width: 480px; }
+  .advisor-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---- lg down (<= 991) ---- */
+@media (max-width: 991.98px) {
+  .nav-links, .nav-cta .btn-q { display: none; }
+  .nav-toggle { display: inline-flex; }
+  .nav-inner { grid-template-columns: auto 1fr auto; }
+  .nav-cta { justify-self: end; }
+
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-visual { max-width: 420px; order: -1; margin-bottom: 24px; }
+  .stat-chip.chip-1 { left: 0; }
+  .stat-chip.chip-2 { right: 0; }
+  .stat-chip.chip-3 { display: none; }
+
+  .trust-stats { grid-template-columns: repeat(2, 1fr); gap: 32px 0; }
+  .trust-stat { padding: 12px 24px; }
+  .trust-stat:nth-child(odd) { border-left: none; padding-left: 0; }
+  .trust-stat:nth-child(3) { border-top: 1px solid var(--line); padding-top: 28px; }
+  .trust-stat:nth-child(4) { border-top: 1px solid var(--line); padding-top: 28px; }
+
+  .about-grid { grid-template-columns: 1fr; gap: 48px; }
+  .about-frame { max-width: 480px; }
+
+  .bento { grid-auto-rows: auto; gap: 16px; }
+  .b-feature { grid-column: 1 / -1; grid-row: auto; padding: 36px; }
+  .b-half, .b-third { grid-column: span 6; }
+
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .process-track { grid-template-columns: 1fr; gap: 24px; }
+  .process-track::before,
+  .process-track::after { display: none; }
+  .process-step { display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: start; }
+  .process-num { margin-bottom: 0; }
+  .process-step p { max-width: none; }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 48px; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-newsletter { grid-column: 1 / -1; }
+
+  .page-hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .page-hero-visual { max-width: 480px; }
+
+  .mv-grid { grid-template-columns: 1fr; gap: 24px; }
+  .founder-grid { grid-template-columns: 1fr; gap: 40px; }
+  .founder-portrait { position: static; max-width: 440px; }
+  .founder-story p:first-child::first-letter { font-size: 3.5rem; }
+
+  .advisor-grid { grid-template-columns: repeat(2, 1fr); }
+  .values-grid { grid-template-columns: 1fr; gap: 48px; }
+}
+
+/* ---- md down (<= 767) ---- */
+@media (max-width: 767.98px) {
+  section { padding-block: clamp(64px, 12vw, 96px); }
+
+  .hero { padding-top: 110px; }
+  .hero-ctas { flex-direction: column; align-items: stretch; }
+  .hero-ctas .btn-q { justify-content: center; }
+  .hero-trust { flex-direction: column; align-items: flex-start; gap: 16px; }
+
+  .stat-chip { padding: 10px 14px; min-width: 140px; }
+  .stat-chip .chip-value { font-size: 1.125rem; }
+  .stat-chip.chip-1 { top: 0; left: 0; }
+  .stat-chip.chip-2 { top: auto; bottom: 0; right: 0; }
+
+  .trust-stats { grid-template-columns: 1fr 1fr; }
+
+  .bento-tile { padding: 28px; }
+  .b-feature { padding: 32px; }
+  .b-half, .b-third { grid-column: 1 / -1; }
+  .b-feature .feature-visual { width: 200px; height: 200px; right: -60px; bottom: -60px; }
+
+  .why-grid { grid-template-columns: 1fr; }
+  .why-card { min-height: 220px; }
+  .why-card h4 { margin-top: 56px; }
+
+  .testimonial-card { padding: 32px; }
+
+  .faq-q { font-size: 1.0625rem; }
+  .faq-a { padding-right: 0; }
+
+  .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .footer-bottom .legal { gap: 16px; flex-wrap: wrap; }
+
+  .advisor-grid { grid-template-columns: 1fr; }
+  .mv-card { padding: 32px; }
+}
+
+/* ---- sm down (<= 575) ---- */
+@media (max-width: 575.98px) {
+  .brand .brand-text { font-size: 1.0625rem; }
+  .nav-cta .btn-q { padding: 10px 18px; font-size: 0.8125rem; }
+  .hero-content h1 { letter-spacing: -0.015em; }
+  .about-badge { width: 88px; height: 88px; bottom: 16px; right: 16px; }
+  .about-badge .year { font-size: 1.25rem; }
+  .err-num { -webkit-text-stroke-width: 0.5px; }
+}

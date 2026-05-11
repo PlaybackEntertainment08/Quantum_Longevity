@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+
+  <title>Not found — Quantum Longevity</title>
+  <meta name="description" content="The page you're looking for doesn't exist yet — but the future might surprise you." />
+
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Sora:wght@300;400;500;600&display=swap" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+  <main class="err" id="main">
+
+    <!-- Background particles -->
+    <div class="err-particles" aria-hidden="true"></div>
+
+    <!-- Orbital ring -->
+    <div class="err-orbit" aria-hidden="true">
+      <svg viewBox="0 0 600 600" fill="none">
+        <defs>
+          <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#0284C7" stop-opacity="0.4"/>
+            <stop offset="50%" stop-color="#6366F1" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="#0D9488" stop-opacity="0.4"/>
+          </linearGradient>
+        </defs>
+        <circle cx="300" cy="300" r="260" stroke="url(#ringGrad)" stroke-width="1"/>
+        <circle cx="300" cy="300" r="200" stroke="url(#ringGrad)" stroke-width="1" stroke-dasharray="2 8"/>
+        <circle cx="300" cy="300" r="140" stroke="url(#ringGrad)" stroke-width="1"/>
+        <circle cx="300" cy="40" r="6" fill="#C9A961"/>
+        <circle cx="500" cy="300" r="4" fill="#0284C7"/>
+        <circle cx="160" cy="440" r="3" fill="#6366F1"/>
+        <!-- molecule -->
+        <g transform="translate(300 300)">
+          <circle r="10" fill="none" stroke="#0284C7" stroke-width="1"/>
+          <circle r="34" fill="none" stroke="#0284C7" stroke-width="1" stroke-dasharray="1 4"/>
+          <circle r="60" fill="none" stroke="#0284C7" stroke-width="1" stroke-dasharray="1 6"/>
+          <circle cx="34" cy="0" r="3" fill="#0284C7"/>
+          <circle cx="-30" cy="14" r="2.5" fill="#10B981"/>
+          <circle cx="14" cy="-32" r="2.5" fill="#6366F1"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="err-stack">
+      <div class="err-num" aria-hidden="true">404</div>
+      <h1>The future you're looking for doesn't exist <em>yet</em>.</h1>
+      <p>
+        But it might soon. In the meantime, return to known territory —
+        and bring the curiosity with you.
+      </p>
+      <a href="index.html" class="btn-q btn-gold" data-magnetic>
+        Return Home
+        <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </main>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/components.js" defer></script>
+</body>
+</html>
