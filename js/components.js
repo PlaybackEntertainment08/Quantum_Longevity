@@ -159,8 +159,7 @@
   }
 
   /* ---------- Newsletter feedback ---------- */
-  const newsletter = $('.newsletter');
-  if (newsletter) {
+  $$('.newsletter').forEach(newsletter => {
     newsletter.addEventListener('submit', (e) => {
       e.preventDefault();
       const input = $('input', newsletter);
@@ -169,5 +168,108 @@
       input.value = 'Thank you. We\'ll be in touch.';
       setTimeout(() => { input.disabled = false; input.value = ''; }, 3000);
     });
+  });
+
+  /* ---------- Therapy category tabs ---------- */
+  const tabGroups = $$('.cat-tabs');
+  tabGroups.forEach(group => {
+    const tabs = $$('.cat-tab', group);
+    const panels = $$('.cat-panel', group);
+    if (!tabs.length || !panels.length) return;
+
+    const activate = (idx) => {
+      tabs.forEach((t, i) => {
+        const selected = i === idx;
+        t.setAttribute('aria-selected', String(selected));
+        t.setAttribute('tabindex', selected ? '0' : '-1');
+      });
+      panels.forEach((p, i) => {
+        const active = i === idx;
+        p.classList.toggle('is-active', active);
+        p.hidden = !active;
+      });
+    };
+
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => activate(i));
+      tab.addEventListener('keydown', (e) => {
+        let next = null;
+        if (e.key === 'ArrowDown' || e.key === 'ArrowRight') next = (i + 1) % tabs.length;
+        else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') next = (i - 1 + tabs.length) % tabs.length;
+        else if (e.key === 'Home') next = 0;
+        else if (e.key === 'End') next = tabs.length - 1;
+        if (next !== null) {
+          e.preventDefault();
+          activate(next);
+          tabs[next].focus();
+        }
+      });
+    });
+    activate(0);
+  });
+
+  /* ---------- Blog filter chips ---------- */
+  $$('[data-filter-group]').forEach(group => {
+    const chips = $$('.chip', group);
+    const cardsHost = document.querySelector(group.dataset.filterTarget || '.blog-grid');
+    if (!chips.length || !cardsHost) return;
+    const cards = $$('.blog-card', cardsHost);
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const cat = chip.dataset.category;
+        chips.forEach(c => {
+          const active = c === chip;
+          c.classList.toggle('is-active', active);
+          c.setAttribute('aria-pressed', String(active));
+        });
+        cards.forEach(card => {
+          const cats = (card.dataset.category || '').split(/\s+/);
+          const show = cat === 'all' || cats.includes(cat);
+          card.classList.toggle('is-hidden', !show);
+        });
+      });
+    });
+  });
+
+  /* ---------- Video walkthrough lightbox ---------- */
+  const lightbox = $('.video-lightbox');
+  if (lightbox) {
+    const openers = $$('[data-video-open]');
+    const closeBtn = $('.video-close', lightbox);
+    let lastFocused = null;
+    const open = () => {
+      lastFocused = document.activeElement;
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      if (closeBtn) closeBtn.focus();
+    };
+    const close = () => {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      if (lastFocused) lastFocused.focus();
+    };
+    openers.forEach(o => o.addEventListener('click', (e) => { e.preventDefault(); open(); }));
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) close(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lightbox.classList.contains('open')) close(); });
   }
+
+  /* ---------- Contact form (no backend) ---------- */
+  $$('.contact-form').forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = $('button[type="submit"]', form);
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      if (btn) {
+        const original = btn.innerHTML;
+        btn.disabled = true;
+        btn.textContent = 'Request received — thank you';
+        setTimeout(() => { btn.disabled = false; btn.innerHTML = original; form.reset(); }, 3200);
+      }
+      // TODO: wire to real endpoint or mailto. No data leaves the page currently.
+    });
+  });
 })();
