@@ -89,7 +89,7 @@
     --container-pad: clamp(20px, 4vw, 48px);
 
     /* Fixed nav height — anchor jumps and any nav-aware spacing reference this */
-    --nav-h: 72px;
+    --nav-h: 92px;
   }
 }
 
@@ -157,6 +157,9 @@
   .section-mist { background: var(--bg-mist); }
   .section-dark { background: var(--bg-dark); color: var(--text-invert); }
   .section-dark h1, .section-dark h2, .section-dark h3 { color: var(--text-invert); }
+  /* Italic emphasis on dark sections: gold so the phrase stays readable and on-brand
+     (the default em color is var(--text-strong), which equals the dark bg and disappears). */
+  .section-dark em { color: var(--gold); }
 
   .section-head { max-width: 720px; margin-bottom: clamp(40px, 4.5vw, 64px); }
   .section-head.center { margin-inline: auto; text-align: center; }
@@ -412,8 +415,8 @@
   /* ===== HERO ===== */
   .hero {
     position: relative;
-    padding-top: clamp(140px, 15vw, 200px);
-    padding-bottom: clamp(80px, 10vw, 140px);
+    padding-top: clamp(124px, 12vw, 168px);
+    padding-bottom: clamp(72px, 9vw, 124px);
     overflow: clip;
     isolation: isolate;
   }
@@ -591,7 +594,7 @@
   }
   .about-frame {
     position: relative;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 4 / 3;
     border-radius: var(--r-lg);
     background: linear-gradient(135deg, #E5EFF7 0%, #D7E6F0 50%, #C9DBE8 100%);
     border: 1px solid var(--gold-soft);
@@ -1115,22 +1118,22 @@
 
   /* ===== Page Hero (about, etc.) ===== */
   .page-hero {
-    padding-top: clamp(140px, 16vw, 200px);
-    padding-bottom: clamp(60px, 8vw, 100px);
+    padding-top: clamp(120px, 11vw, 160px);
+    padding-bottom: clamp(56px, 7vw, 88px);
     position: relative;
     overflow: hidden;
     background: linear-gradient(135deg, #EEF4F9 0%, #FAFBFC 60%);
   }
   .page-hero-grid {
     display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: 64px;
+    grid-template-columns: 1.1fr 1fr;
+    gap: clamp(40px, 5vw, 72px);
     align-items: center;
   }
   .page-hero h1 { margin-bottom: 24px; }
   .page-hero p { font-size: var(--body-lg); color: var(--text-body); max-width: 56ch; }
   .page-hero-visual {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 4 / 3;
     border-radius: var(--r-lg);
     background:
       radial-gradient(circle at 30% 30%, rgba(255,255,255,0.5), transparent 50%),
@@ -2103,6 +2106,90 @@
     inset: 18%;
     opacity: 0.18;
     mix-blend-mode: overlay;
+  }
+
+  /* Image fills for visual containers — image takes over from the decorative gradient/grid.
+     No z-index on imgs: DOM order keeps overlays (badges, hover marks) above the photo.
+     Marketing-creative containers (cat panels, therapy details, hero) use `contain`
+     so the text/badges baked into the source aren't cropped.
+     Photo containers (advisors, blog, instagram, founder, clinic, photo heroes) use `cover`. */
+  .cat-panel-visual img,
+  .prog-visual img,
+  .about-frame-inner img,
+  .page-hero-visual img,
+  .blog-thumb img,
+  .insta-cell img,
+  .advisor-photo img,
+  .founder-portrait img,
+  .clinic-thumb img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  /* Photos → cover */
+  .blog-thumb img,
+  .insta-cell img,
+  .advisor-photo img,
+  .founder-portrait img,
+  .clinic-thumb img,
+  .page-hero-visual.has-photo img {
+    object-fit: cover;
+  }
+  /* Creatives → contain (preserve baked-in headings, badges, bullets) */
+  .cat-panel-visual.has-img img,
+  .prog-visual.has-img img,
+  .about-frame-inner.has-img img,
+  .page-hero-visual.has-img img {
+    object-fit: contain;
+    object-position: center;
+    background: var(--bg-base);
+  }
+  /* Hide decorative gradients/grids in containers that now hold a real image */
+  .cat-panel-visual.has-img::after,
+  .prog-visual.has-img::after,
+  .about-frame-inner.has-img::before,
+  .about-frame-inner.has-img::after,
+  .page-hero-visual.has-img::after,
+  .page-hero-visual.has-photo::after,
+  .founder-portrait.has-photo::after { display: none; }
+  /* Keep overlay elements above images regardless of stacking context */
+  .advisor-photo .li,
+  .insta-cell .ig-mark,
+  .about-badge { z-index: 2; }
+
+  /* Brand logo (uses Logo.png instead of inline SVG) */
+  .brand .brand-logo {
+    height: 64px;
+    width: auto;
+    display: block;
+    border-radius: 10px;
+    transition: height 0.4s var(--ease-out);
+  }
+  .nav-wrap.scrolled .brand .brand-logo { height: 52px; }
+  @media (max-width: 575.98px) {
+    .brand .brand-logo { height: 44px; }
+    .nav-wrap.scrolled .brand .brand-logo { height: 40px; }
+  }
+  /* Footer keeps the logo smaller so the brand column doesn't dominate */
+  .footer-brand .brand .brand-logo { height: 52px; }
+  /* Soft scrim over busy marketing images so any overlaid text remains readable if needed */
+  .has-img-scrim::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(11,20,38,0.05), rgba(11,20,38,0));
+    z-index: 2;
+    pointer-events: none;
+  }
+  /* Lightbox: brand emblem fill */
+  .video-frame .vf-logo {
+    max-width: 280px;
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
   }
   .u-mt-16 { margin-top: 16px; }
   .u-mt-24 { margin-top: 24px; }
